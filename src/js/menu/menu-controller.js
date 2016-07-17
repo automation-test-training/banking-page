@@ -1,3 +1,4 @@
+import loginTemp from './login.html';
 import { assign } from 'lodash';
 
 export default class MenuController {
@@ -15,10 +16,8 @@ export default class MenuController {
     $scope.loginData = {};
 
     // Create the login modal that we will use later
-    $ionicModal.fromTemplateUrl('templates/login.html', {
+    $scope.modal = $ionicModal.fromTemplate(loginTemp, {
       scope: $scope
-    }).then(function(modal) {
-      $scope.modal = modal;
     });
 
     // Triggered in the login modal to close it
@@ -43,11 +42,9 @@ export default class MenuController {
     };
   }
 
-  // search () {
-  //   this.searchService
-  //     .fetch(this.searchTerm)
-  //     .then(response => {
-  //     this.items = response.data.items;
-  // });
-  // }
+  hello() {
+    this.$scope.hello = "Hello!";
+    return "hello";
+  }
+
 }

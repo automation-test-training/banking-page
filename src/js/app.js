@@ -1,12 +1,9 @@
-import MenuController from './menu-controller';
+import menu from './menu/menu.module';
 
 // angular.module is a global place for creating, registering and retrieving Angular modules
-// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-export default angular.module('starter', ['ionic'])
-
-  .controller('MenuCtrl', MenuController)
+export default angular.module('banking', ['ionic', menu.name])
 
   .controller('PlaylistsCtrl', function($scope) {
     $scope.playlists = [
