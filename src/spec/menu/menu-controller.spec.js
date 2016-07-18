@@ -1,4 +1,4 @@
-import menu from '../js/menu/menu.module';
+import menu from '../../js/menu/menu.module';
 
 describe('Menu Controller', () => {
   let controller, $scope;
