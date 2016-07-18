@@ -7,42 +7,26 @@ const AppConfig = ($stateProvider, $urlRouterProvider) => {
       templateUrl: 'templates/menu.html',
       controller: 'MenuCtrl'
     })
-    .state('app.search', {
-      url: '/search',
+    .state('app.account', {
+      url: '/account',
       views: {
         'menuContent': {
-          templateUrl: 'templates/search.html'
+          templateUrl: 'templates/account.html',
+          controller: 'AccountCtrl',
+          controllerAs: 'account'
         }
       }
     })
-    .state('app.browse', {
-      url: '/browse',
+    .state('app.transfer', {
+      url: '/transfer',
       views: {
         'menuContent': {
-          templateUrl: 'templates/browse.html'
-        }
-      }
-    })
-    .state('app.playlists', {
-      url: '/playlists',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/playlists.html',
-          controller: 'PlaylistsCtrl'
-        }
-      }
-    })
-    .state('app.single', {
-      url: '/playlists/:playlistId',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/playlist.html',
-          controller: 'PlaylistCtrl'
+          templateUrl: 'templates/transfer.html'
         }
       }
     });
 
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/account');
 };
 
 export default AppConfig;

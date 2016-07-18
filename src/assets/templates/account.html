@@ -1,0 +1,14 @@
+<ion-view view-title="Account">
+  <ion-content>
+    <ion-refresher
+      pulling-text="Pull to refresh..."
+      on-refresh="account.refresh()">
+    </ion-refresher>
+    <ion-list>
+      <ion-item ng-repeat="account in accounts">
+        <div>{{account.number}}</div>
+        <div ng-repeat="balance in account.balances">- {{balance.currency}} {{balance.amount}}</div>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
