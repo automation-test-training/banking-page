@@ -1,6 +1,4 @@
 import menu from '../js/menu/menu.module';
-import chai from 'chai';
-chai.should();
 
 describe('Menu Controller', () => {
   let controller, $scope;

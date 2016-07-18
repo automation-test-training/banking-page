@@ -83,4 +83,5 @@ export default angular.module('banking', ['ionic', menu.name])
   });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/playlists');
-});
+})
+  .constant('API_URL', 'http://localhost:8080');
