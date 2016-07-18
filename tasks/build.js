@@ -11,6 +11,8 @@ gulp.task('clean', () => del('www'));
 
 gulp.task('build', ['clean', 'install', 'assets', 'sass', 'webpack']);
 
+gulp.task('flush', ['assets', 'sass', 'webpack']);
+
 gulp.task('assets', () => {
   gulp.src('./src/assets/**/*', { base: 'src/assets' })
     .pipe(gulp.dest('./www'));

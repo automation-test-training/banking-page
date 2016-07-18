@@ -16,3 +16,13 @@ gulp.task('spec', (cb) => {
   }, cb);
   server.start()
 });
+
+gulp.task('spec-ci', (cb) => {
+  var server = new karma.Server({
+    configFile: __dirname + '/karma.conf.js',
+    singleRun: true,
+    autoWatch: false,
+    browsers: ['PhantomJS']
+  }, cb);
+  server.start()
+});

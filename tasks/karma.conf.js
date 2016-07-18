@@ -23,7 +23,6 @@ module.exports = function (config) {
     },
 
     webpack: {
-
       module: {
         loaders: [{
           test: /\.spec\.js$/,
