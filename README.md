@@ -1,4 +1,4 @@
-Banking Page
+Banking Page [![Build Status](https://travis-ci.org/automation-test-training/banking-page.svg?branch=master)](https://travis-ci.org/automation-test-training/banking-page)
 =====================
 
 A project for Ionic that optionally supports using custom SCSS.
