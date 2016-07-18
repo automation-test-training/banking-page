@@ -17,7 +17,7 @@ gulp.task('spec', (cb) => {
   server.start()
 });
 
-gulp.task('spec-ci', (cb) => {
+gulp.task('spec-ci', ['install'], (cb) => {
   var server = new karma.Server({
     configFile: __dirname + '/karma.conf.js',
     singleRun: true,
