@@ -1,5 +1,24 @@
 <ion-view view-title="Transfer">
   <ion-content>
-    <h1>Transfer</h1>
+    <form ng-submit="transfer.doTransfer(from, to, trans.amount)">
+      <div class="list">
+        <label class="item item-input item-select">
+          <span class="input-label">From</span>
+          <select ng-model="from.accountNumber" ng-options="account.number as account.number for account in accounts" required></select>
+        </label>
+        <label class="item item-input item-select">
+          <span class="input-label">To</span>
+          <select ng-model="to.accountNumber" ng-options="account.number as account.number for account in accounts" required></select>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Amount</span>
+          <input ng-model="trans.amount" type="number" min="0" max="100000" step="0.01" required>
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive" type="submit">Transfer</button>
+        </label>
+        {{message}}
+      </div>
+    </form>
   </ion-content>
 </ion-view>
