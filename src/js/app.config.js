@@ -21,7 +21,9 @@ const AppConfig = ($stateProvider, $urlRouterProvider) => {
       url: '/transfer',
       views: {
         'menuContent': {
-          templateUrl: 'templates/transfer.html'
+          templateUrl: 'templates/transfer.html',
+          controller: 'TransferCtrl',
+          controllerAs: 'transfer'
         }
       }
     });
