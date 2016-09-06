@@ -19,10 +19,11 @@ module.exports = function (config) {
 
     // https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      '../src/spec/index.js': ['webpack'],
+      '../src/spec/index.js': ['webpack', 'sourcemap'],
     },
 
     webpack: {
+      devtool: 'inline-source-map',
       module: {
         loaders: [{
           test: /\.spec\.js$/,
