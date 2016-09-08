@@ -11,6 +11,7 @@ $ npm install -g ionic gulp-cli
 
 ```bash
 $ npm install
+$ bower install
 ```
 
 ### Build
