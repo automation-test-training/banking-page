@@ -1,3 +1,5 @@
+/*global cordova:true, StatusBar:true*/
+
 /*@ngInject*/
 const AppRun = ($ionicPlatform) => {
   $ionicPlatform.ready(() => {

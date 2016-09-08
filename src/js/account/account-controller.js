@@ -2,8 +2,8 @@ import {assign} from 'lodash';
 
 class AccountController {
 
-  constructor($scope, userService, accountService) {
-    assign(this, {$scope, userService, accountService});
+  constructor($scope, $log, userService, accountService) {
+    assign(this, {$scope, $log, userService, accountService});
     this.refresh();
   }
 
@@ -11,7 +11,7 @@ class AccountController {
     this.accountService.getBy(this.userService.getCurrentUser()).then((resp) => {
       this.$scope.accounts = resp.data;
     }, (err) => {
-      console.log("account refresh failed", err);
+      this.$log.error("account refresh failed", err);
     }).then(() => {
       this.$scope.$broadcast('scroll.refreshComplete');
     });
@@ -19,6 +19,6 @@ class AccountController {
 
 }
 
-AccountController.$inject = ['$scope', 'userService', 'accountService'];
+AccountController.$inject = ['$scope', '$log', 'userService', 'accountService'];
 
 export default AccountController;
