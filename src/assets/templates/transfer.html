@@ -1,6 +1,6 @@
 <ion-view view-title="Transfer">
   <ion-content>
-    <form transfer.doTransfer(from, to, trans.amount)>
+    <form ng-submit="transfer.doTransfer(from, to, trans.amount)">
       <div class="list">
         <label class="item item-input item-select">
           <span class="input-label">From</span>
