@@ -15,7 +15,8 @@ describe('Account Controller', () => {
   beforeEach(inject(($controller, $rootScope, _$httpBackend_, userService) => {
     sinon.stub(userService, 'getCurrentUser').returns('u1');
     $httpBackend = _$httpBackend_;
-    $httpBackend.when('GET', `${apiUrl}/u1/accounts`).respond(200, accounts);
+    // $httpBackend.when('GET', `${apiUrl}/u1/accounts`).respond(200, accounts);
+    $httpBackend.when('GET', /\/accounts/).respond(200, accounts);
     $scope = $rootScope.$new();
     controller = $controller('AccountCtrl', {
       $scope
